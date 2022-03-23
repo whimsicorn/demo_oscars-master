@@ -1,0 +1,99 @@
+/*
+backgroung color - #ecd7d3
+Font-Family: 'Oxygen', Sans-Serif;
+Font-Size: 46px;
+Font-Family: 'Noto Serif', Serif;
+Font-Size: 16px;
+*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    Font-Family: 'Noto Serif', Serif;
+    color: black;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    background-color: #bda7a6;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    margin: 0;
+    height: 15vh;
+}
+
+.container {
+    min-width: 300px;
+    max-width: 1140px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+
+}
+
+.title {
+    display: block;
+    margin: 20px auto 0 auto;
+    line-height: 20px;
+    Font-Family: 'Oxygen', Sans-Serif;
+    Font-Size: 36px;
+    letter-spacing: 40px;
+
+}
+
+.link {
+    display: block;
+    padding: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    align-self: flex-end;
+    Font-Family: 'Oxygen', Sans-Serif;
+}
+
+.link a{
+
+    text-decoration: none;
+    color: black;
+
+
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    height: 80vh;
+    padding: 0;
+    background-color: #ecd7d3
+}
+
+/* LEFT CONTAINER */
+
+.left-container {
+    height: 85vh;
+    width: 20vw;
+    background-image:url('https://s2.r29static.com/bin/entry/c9d/340x566,85/1749023/image.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* RIGHT CONTAINER */
+.right-container {
+    height: 85vh;
+    width: 80vw;
+    background-color: #ecd7d3;
+    display: flex;
+}
+
+/*TABLE*/
+
+.container-table {
+    padding: 20px;
+    margin: 100px auto auto auto;
+}
+

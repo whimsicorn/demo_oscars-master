@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% block title %}Rate film{% endblock %}
+
+{% block page %}
+<h1>Oceń film: </h1>
+
+
+
+
+<h2>{{ films.title }}</h2>
+<p>{{ films.description }}</p>
+
+<a href="{% url 'edit_film' films.id %}">edytuj</a>
+<a href="{% url 'delete_film' films.id %}">usuń</a>
+
+
+
+<h2>oceny</h2>
+
+<div class="container_table">
+  <table class="table" border="2">
+    <tr>
+      <td>użytkownik</td>
+      <td>ocena</td>
+    </tr>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.username }}</td>
+      <td>ocena </td>
+      {% endfor %}
+
+    </tr>
+
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

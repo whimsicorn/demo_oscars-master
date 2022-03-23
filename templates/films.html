@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block title %}FILMS{% endblock %}
+
+{% block page %}
+{% for film in films %}
+
+    <h2>{{film.title}}</h2>
+    <form method="POST" enctype="multipart/form-data"> {{ form }} </form>
+    {% csrf_token %}
+    <button type="submit">oceń</button>
+   <form method="POST" enctype="multipart/form-data"> {{ form }} </form>
+    {% csrf_token %}
+    <button type="submit">recenzja</button>
+
+{% endfor %}
+
+
+{% endblock %}

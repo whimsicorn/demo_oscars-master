@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block title %}Rate film{% endblock %}
+
+{% block page %}
+<form method="POST" enctype="multipart/form-data"> {{ form }} </form>
+{% csrf_token %}
+<button type="submit">EDYTUJ</button>
+
+{% endblock %}
