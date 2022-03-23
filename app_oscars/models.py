@@ -28,7 +28,7 @@ class Review(models.Model):
 
     def __str__(self):
         return "Ocena "+self.user.username+" "+self.films.title
-
+#to be deleted
 class TableReview(models.Model):
     filmtitle = models.ForeignKey(Films,on_delete=models.CASCADE)
     user = models.ForeignKey (get_user_model(), on_delete=models.CASCADE)
