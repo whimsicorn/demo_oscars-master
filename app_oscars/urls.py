@@ -12,4 +12,4 @@ urlpatterns = [
    path('films_rating/<int:id>', films_rating, name="films_rating"),
    path('films/',films, name="films"),
 
-]
+]+static (settings.STATIC_URL, document_root=settings.STATIC_ROOT)

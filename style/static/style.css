@@ -12,7 +12,8 @@ body {
     font-size: 16px;
     line-height: 1.7;
     Font-Family: 'Noto Serif', Serif;
-    color: black;
+    color: green;
+
 }
 
 /* NAVIGATION */
@@ -42,7 +43,7 @@ body {
     margin: 20px auto 0 auto;
     line-height: 20px;
     Font-Family: 'Oxygen', Sans-Serif;
-    Font-Size: 36px;
+    Font-Size: 66px;
     letter-spacing: 40px;
 
 }
@@ -96,4 +97,5 @@ body {
     padding: 20px;
     margin: 100px auto auto auto;
 }
+
 
