@@ -11,5 +11,6 @@ urlpatterns = [
    path('delete_film/<int:id>',delete_film, name="delete_film"),
    path('films_rating/<int:id>', films_rating, name="films_rating"),
    path('films/',films, name="films"),
+   path('submit_review/<int:id>', name="submit_review")
 
-]+static (settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]

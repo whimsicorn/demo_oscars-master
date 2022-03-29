@@ -79,3 +79,7 @@ class ReviewListView(SingleTableMixin, FilterView):
     template_name = 'ranking.html'
     filterset_class = ReviewFilter
 
+#def submit_review(request, id):
+#    if request.method == "POST":
+
+

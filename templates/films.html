@@ -1,6 +1,5 @@
 {% extends 'main.html' %}
-{% load bootstrap3 %}
-{% bootstrap_css %}
+
 
 
 
@@ -14,29 +13,30 @@
 {% for film in films %}
 
     <h2 class="film-tile">{{film.title}}</h2>
-    <form method="POST" enctype="multipart/form-data">
+    <form action="{% url 'submit_review' film.id %}" method="POST">
     {% csrf_token %}
         <div class = rate>
-            <input type="radio" id="review20" value="10,0" name="user-review" required><label for="review20" title="10,0"></label>
-            <input type="radio" id="review19" value="9,5" name="user-review" required><label for="review19" title="9,5" class="half"></label>
-            <input type="radio" id="review18" value="9,0" name="user-review" required><label for="review18" title="9,0"></label>
-            <input type="radio" id="review17" value="8,5" name="user-review" required><label for="review17" title="8,5" class="half"></label>
-            <input type="radio" id="review16" value="8,0" name="user-review" required><label for="review16" title="8,0"></label>
-            <input type="radio" id="review15" value="7,5" name="user-review" required><label for="review15" title="7,5" class="half"></label>
-            <input type="radio" id="review14" value="7,0" name="user-review" required><label for="review14" title="7,0"></label>
-            <input type="radio" id="review13" value="6,5" name="user-review" required><label for="review13" title="6,5" class="half"></label>
-            <input type="radio" id="review12" value="6,0" name="user-review" required><label for="review12" title="6,0"></label>
-            <input type="radio" id="review11" value="5,5" name="user-review" required><label for="review11" title="5,5" class="half"></label>
-            <input type="radio" id="review10" value="5,0" name="user-review" required><label for="review10" title="5,0"></label>
-            <input type="radio" id="review9" value="4,5" name="user-review" required><label for="review9" title="4,5" class="half"></label>
-            <input type="radio" id="review8" value="4,0" name="user-review" required><label for="review8" title="4,0"></label>
-            <input type="radio" id="review7" value="3,5" name="user-review" required><label for="review7" title="3,5" class="half"></label>
-            <input type="radio" id="review6" value="3,0" name="user-review" required><label for="review6" title="3,0"></label>
-            <input type="radio" id="review5" value="2,5" name="user-review" required><label for="review5" title="2,5" class="half"></label>
-            <input type="radio" id="review4" value="2,0" name="user-review" required><label for="review4" title="2,0"></label>
-            <input type="radio" id="review3" value="1,5" name="user-review" required><label for="review3" title="1,5" class="half"></label>
-            <input type="radio" id="review2" value="1,0" name="user-review" required><label for="review2" title="1,0"></label>
-            <input type="radio" id="review1" value="0,5" name="user-review" required><label for="review1" title="0,5" class="half"></label>
+
+            <input class="input" type="radio" id="review20" value="10,0" name="user-review" required><label for="review20" title="10,0"></label>
+            <input class="input" type="radio" id="review19" value="9,5" name="user-review" required><label for="review19" title="9,5" class="half"></label>
+            <input class="input" type="radio" id="review18" value="9,0" name="user-review" required><label for="review18" title="9,0"></label>
+            <input class="input" type="radio" id="review17" value="8,5" name="user-review" required><label for="review17" title="8,5" class="half"></label>
+            <input class="input" type="radio" id="review16" value="8,0" name="user-review" required><label for="review16" title="8,0"></label>
+            <input class="input" type="radio" id="review15" value="7,5" name="user-review" required><label for="review15" title="7,5" class="half"></label>
+            <input class="input" type="radio" id="review14" value="7,0" name="user-review" required><label for="review14" title="7,0"></label>
+            <input class="input" type="radio" id="review13" value="6,5" name="user-review" required><label for="review13" title="6,5" class="half"></label>
+            <input class="input" type="radio" id="review12" value="6,0" name="user-review" required><label for="review12" title="6,0"></label>
+            <input class="input" type="radio" id="review11" value="5,5" name="user-review" required><label for="review11" title="5,5" class="half"></label>
+            <input class="input" type="radio" id="review10" value="5,0" name="user-review" required><label for="review10" title="5,0"></label>
+            <input class="input" type="radio" id="review9" value="4,5" name="user-review" required><label for="review9" title="4,5" class="half"></label>
+            <input class="input" type="radio" id="review8" value="4,0" name="user-review" required><label for="review8" title="4,0"></label>
+            <input class="input" type="radio" id="review7" value="3,5" name="user-review" required><label for="review7" title="3,5" class="half"></label>
+            <input class="input" type="radio" id="review6" value="3,0" name="user-review" required><label for="review6" title="3,0"></label>
+            <input class="input" type="radio" id="review5" value="2,5" name="user-review" required><label for="review5" title="2,5" class="half"></label>
+            <input class="input" type="radio" id="review4" value="2,0" name="user-review" required><label for="review4" title="2,0"></label>
+            <input class="input" type="radio" id="review3" value="1,5" name="user-review" required><label for="review3" title="1,5" class="half"></label>
+            <input class="input" type="radio" id="review2" value="1,0" name="user-review" required><label for="review2" title="1,0"></label>
+            <input class="input" type="radio" id="review1" value="0,5" name="user-review" required><label for="review1" title="0,5" class="half"></label>
 
         </div>
         <div>
