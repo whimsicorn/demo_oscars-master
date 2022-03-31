@@ -20,14 +20,20 @@ class Films(models.Model):
     def __str__(self):
         return self.polish_title+" ("+self.title+") "+", "+self.director
 
+
 class Review(models.Model):
-    points = models.DecimalField(default=0.0, null=True, max_digits=3, decimal_places=1,)
-    review = models.TextField(max_length=500,default="", blank=True)
-    films = models.ForeignKey (Films, on_delete=models.CASCADE)
-    user = models.ForeignKey (get_user_model(), on_delete=models.CASCADE)
+    films = models.ForeignKey(Films, on_delete=models.CASCADE)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    review = models.TextField(max_length=500, blank=True)
+    points = models.FloatField()
+    ip = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
         return "Ocena "+self.user.username+" "+self.films.title
+
+
+
+
 #to be deleted
 class TableReview(models.Model):
     filmtitle = models.ForeignKey(Films,on_delete=models.CASCADE)

@@ -10,11 +10,24 @@
 
 
 {% block page %}
-{% for film in films %}
 
-    <h2 class="film-tile">{{film.title}}</h2>
+<h1>Cześć, {{ user.get_username }}</h1>
+
+
+
+
+{% for rv in reviews %}
+{% if rv.user.username == user.get_username %}
+<h1>{{ rv.films.title }}</h1>
+<p>{{ rv.points }}</p>
+<p>{{ rv.review }}</p>
+{% endif %}
+{% endfor %}
+
+{% for film in films %}
     <form action="{% url 'submit_review' film.id %}" method="POST">
     {% csrf_token %}
+{% endfor %}
         <div class = rate>
 
             <input class="input" type="radio" id="review20" value="10,0" name="user-review" required><label for="review20" title="10,0"></label>
@@ -43,14 +56,16 @@
 
             Recenzja:
             <textarea name="user-review"  rows="10" class = "form-control"></textarea>
-              <button type="submit">oceń</button>
+            {% if user.is_authenticated %}
+            <button type="submit">oceń</button>
+            {% endif %}
 
         </div>
     </form>
 
 
 
-{% endfor %}
+
 
 
 {% endblock %}
